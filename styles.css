@@ -1,0 +1,44 @@
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  overflow: hidden; /*need a padding to let nested "one" element have something to push off of, we can't use padding:1px; because it adds pixels to the width and the height so we use overflow:hidden; to get the original dimensions */
+  filter:blur(2px); /* blurs content of entire canvas */
+}
+.frame {
+  border: 50px solid black;
+  width: 500px;
+  padding: 50px; /*distance between the frame and the canvas */
+  margin: 20px auto; /* position of the frame relative to the area outside the borders*/
+}
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto; /*position of the first rectangle, in this case relative to its parent element, the canvas*/
+  box-shadow: 0 0 3px 3px #efb762; /*increases the area and softens the edges*/
+  border-radius:9px; /*rounds the borders of an element by 9px*/
+  transform:rotate(-0.6deg); /*tilts counter-clockwise by 0.6 degrees*/
+}
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px; /*removes top margin, centers it horizontally, and sets the bottom margin to 20px*/
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px; /    *rounds top left and bottom right corners to 8px and top right and bottom left to 10px */
+  transform:rotate(0.4deg);
+}
+.one, .two {
+  filter: blur(1px);
+}
+.three {
+  width: 91%; /*can use percentages instead of pixels */
+  height: 28%;
+  background-color: #b20403;
+  margin: auto;
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius:30px 25px 60px 12px; /* rounds top left by 30, top right by 25, bottom right by 60 and bottom left by 12*/
+  transform:rotate(-0.2deg);
+}
